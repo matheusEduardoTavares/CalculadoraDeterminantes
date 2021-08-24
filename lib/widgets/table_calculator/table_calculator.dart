@@ -174,10 +174,15 @@ class TableCalculator extends StatelessWidget {
                       }, 
                       child: const Text('Calcular')
                     ),
+                    const SizedBox(height: 10,),
                     ValueListenableBuilder(
                       valueListenable: HomePage.sum, 
                       builder: (_, __, ___) => Text(
                         HomePage.sum.value != null ? 'Determinante = ${HomePage.sum.value}' : '',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     )
                   ],
